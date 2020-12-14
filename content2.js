@@ -20,7 +20,7 @@ grades[19].children[1].innerHTML = "SC BIOL 4020 3.00 M"
 grades[20].children[2].innerHTML = "Current Topics in Biological Thesis Research"
 grades[20].children[1].innerHTML = "SC BIOL 3000 2.00 A"
 
-grades[22].children[1].innerHTML = "SC PSYC 1010 6.00 B"
+grades[22].children[1].innerHTML = "SC PSYC 1010 3.00 B"
 
 grades[21].children[1].innerHTML = "AP EN 1101 3.00 A"
 grades[21].children[3].innerHTML = "B"
