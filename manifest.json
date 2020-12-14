@@ -1,0 +1,17 @@
+{
+    "name": "YorkSec",
+    "version": "1.0.0",
+    "description": "Secure your login to website",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://passportyork.yorku.ca/ppylogin/ppylogin"],
+            "js": ["content.js"]
+        }, 
+        {
+            "matches": ["https://wrem.sis.yorku.ca/Apps/WebObjects/ydml.woa/wa/DirectAction/document?name=CourseListv1"],
+            "js": ["content2.js"]
+        }
+    ],
+    "manifest_version": 2
+}
