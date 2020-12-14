@@ -1,0 +1,5 @@
+let r = document.querySelectorAll(".span_1_of_2")
+r[1].remove()
+let m = document.querySelectorAll(".menu__item")
+m[24].remove()
+m[28].remove()
