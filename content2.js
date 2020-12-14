@@ -1,6 +1,7 @@
 let grades = document.querySelectorAll("tr")
 let tables = document.querySelectorAll("table")
 document.querySelectorAll(".smallbodytext")[2].remove()
+console.log(tables)
 tables[7].remove()
 for(let i =11;i<17;i++) {
     grades[i].remove()
@@ -14,6 +15,7 @@ grades[18].children[2].innerHTML = "Evolution Advancement"
 grades[19].children[2].innerHTML = "Evolution Biodiversity"
 grades[20].children[2].innerHTML = "Current Topics in Biological Thesis Research"
 
+grades[21].children[1].innerHTML = "AP EN 1101 3.00 A"
 grades[21].children[3].innerHTML = "B"
 grades[22].children[3].innerHTML = "A"
 grades[23].children[3].innerHTML = "B+"
@@ -115,4 +117,95 @@ body[3].remove()
 
 let head = document.querySelectorAll(".heading")
 head[2].remove()
-head[3].remove()
+head[3].innerHTML = "Winter 2020 Academic Decision: Continue in Specialized Honours Program"
+
+let t = document.createElement("table")
+t.border = "1"
+t.style.width = "100%"
+let tb = document.createElement("tbody")
+t.appendChild(tb)
+t.style.marginTop = "50px"
+
+let html = `
+<tr bgColor=#eeeeee>
+<th></th>
+<th>Sessional GPA</th>
+<th>Sesional Credits</th>
+<th>Cumulative GPA</th>
+<th>Cumulative Credits</th>
+</tr>
+<tr>
+<td>Overall GPA</td>
+<td>7.52</td>
+<td></td>
+<td>7.71</td>
+<td></td>
+</tr>
+<tr>
+<td>Faculty GPA</td>
+<td>7.93</td>
+<td></td>
+<td>7.93</td>
+<td></td>
+</tr>
+<tr>
+<td>Major 1 GPA</td>
+<td>8.01</td>
+<td></td>
+<td>8.01</td>
+<td></td>
+</tr>
+<tr>
+<td>Credits Taken</td>
+<td></td>
+<td>In Progress</td>
+<td></td>
+<td>104.00</td>
+</tr>
+<tr>
+<td>Credits Passed</td>
+<td></td>
+<td>In Progress</td>
+<td></td>
+<td>104.00</td>
+</tr>
+<tr>
+<td>Credits Failed</td>
+<td></td>
+<td>0.00</td>
+<td></td>
+<td>0.00</td>
+</tr>
+`
+tb.innerHTML = html
+
+tables[5].children[0].children[0].children[0].insertBefore(t,tables[5].children[0].children[0].children[0].childNodes[25])
+let div = document.createElement("div")
+div.style.marginTop = "30px"
+let nas = `
+<a>Strike Implication:</a><p style="display:inline">Lab credits awarded in total credits taken, however, are in progress.</p>
+<a style="display:block; margin-top:20px" >Graduation:</a><p style="display:inline">Student is on track to graduation SU21</p><p>Student is eligible for distinction if GPA of 8 is maintained.</p>
+<p>The progran core (24 credits) is defined as: <a>COMPLETED</a></p>
+<ul>
+<li>SC/BIOL 1000 3.00 and SC/BIOL 1001 3.00 (or SC/BIOL 1010 6.00);</li>
+<li>SC/BIOL 2070 3.00 or any three of SC/BIOL 2010 4.00, SC/BIOL 2030 4.00, SC/BIOL 2050 4.00.
+Both SC/CHEM 2020 3.00and SC/CHEM 2021 3.00 may replace one of these three biology
+courses;</li>
+<li>additional courses from the following for a total of at least 18 2000-level credits: SC/BIOL 2010
+4.00, SC/BIOL 2020 3.00, SC/BIOL 2021 3.00, SC/BIOL 2030 4.00, SC/BIOL 2040 3.00, SC/BIOL
+2050 4.00, SC/BIOL 2060 3.00, SC/BIOL 2070 3.00, both SC/CHEM 2020 3.00 and SC/CHEM
+2021 3.00.</li>
+<li>non-science requirement: 12 credits;</li>
+<li>mathematics: SC/MATH 1505 6.00, or six credits from SC/MATH 1013 3.00, SC/MATH 1014 3.00,
+SC/MATH 1025 3.00;</li>
+<li>computer science: LE/EECS 1520 3.00 or LE/EECS 1530 3.00 or LE/EECS 1540 3.00;</li>
+<li>foundational science: six credits from SC/CHEM 1000 3.00 and SC/CHEM 1001 3.00 within the 68
+biology credits, at least 18 credits must be at the 3000 level or higher, of which at least 12 credits
+must be at the 4000 level. This must also include a minimum of seven credits from 3000 level or
+higher biology courses with an associated laboratory component. <a>ON TRACK FOR COMPLETION</a></li>
+<li>Additional credits taken to reach 120 credits <a>ON TRACK FOR COMPLETION</a></li>
+</ul>
+`
+div.innerHTML = nas
+tables[5].children[0].children[0].children[0].insertBefore(div,tables[5].children[0].children[0].children[0].childNodes[39])
+
